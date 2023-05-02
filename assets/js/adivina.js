@@ -15,17 +15,17 @@ function busquedaBinaria() {
 
 }
 
-disminuye.addEventListener("click", function () {
+function disminuyeM() {
     max = num - 1;
     busquedaBinaria();
-});
+};
 
-incrementa.addEventListener("click", function () {
+ function incrementaM() {
     min = num + 1;
     busquedaBinaria();
-});
+};
 
-empieza.addEventListener("click", function () {
+function empiezaY() {
     incrementa.removeAttribute("class");
     disminuye.removeAttribute("class");
     termina.removeAttribute("class");
@@ -33,8 +33,9 @@ empieza.addEventListener("click", function () {
     disminuye.setAttribute("class", "col-lg-2 col-md-3 col-sm-5 btn btn-dark btn-lg");
     termina.setAttribute("class", "col-lg-2 col-md-3 col-sm-5 btn btn-dark btn-lg");
     empieza.setAttribute("class", "hide");
-})
-termina.addEventListener("click", function () {
+    busquedaBinaria();
+};
+ function terminaY() {
     document.getElementById("frase").innerHTML = `¡He ganado! estabas pensando en el ${num}`;
     repite.removeAttribute("class");
     repite.setAttribute("class", "col-lg-2 col-md-3 col-sm-5 btn btn-dark btn-lg");
@@ -43,9 +44,9 @@ termina.addEventListener("click", function () {
     termina.setAttribute("class", "hide");
     empieza.setAttribute("class", "hide");
     resultado.setAttribute("class", "hide");
-});
+};
 
-repite.addEventListener("click", _ => {
+function repiteY() {
     location.reload();
 
-});
+};
